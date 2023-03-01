@@ -1,0 +1,16 @@
+<body>
+    <header>
+        <a href="./"><img alt="Logo" src="-/image/logo/default.webp" width="175" height="70" palette-dark="-/image/logo/dark/default.webp"
+             palette-query='{"@alt": $environment.siteName & " Logo"}' /></a>
+        <nav palette-query='$processors.buildNav("top")'></nav>
+        <h1 palette-source="$processors.getContent()" palette-query='{"@style": "background-image: url(" & (cover ? cover : $environment.cover) & ");"}'>
+            <span palette-source="$processors.getContent()" palette-query='{"#innerHTML": title}'></span>
+        </h1>
+    </header>
+    <nav class="breadcrumb" palette-query='$processors.buildBreadcrumb()'></nav>
+    <nav class="pagesmenu" palette-source="$processors.getContent()" palette-query='kind in ["home"] ? {} : $processors.buildSiblingPagesMenu()'></nav>
+    <main palette-source="$processors.getContent()"></main>
+    <footer>
+        <nav palette-query='$processors.buildNav("footer")'></nav>
+    </footer>
+</body>

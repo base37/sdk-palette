@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>body > * { display: none; }</style>
+
+        <base href="./">
+        <template palette-include="-/include/head"></template>
+
+        <link rel="manifest" href="manifest.webmanifest" />
+    </head>
+    <body palette-source="$processors.getContent()" palette-query='kind ? {"@kind":kind} : {}'>
+
+        <template palette-include="-/include/index"></template>
+
+        <noscript>LiveElement Palette requires javascript enabled</noscript>
+        <script defer src="https://cdn.jsdelivr.net/gh/cloudouble/element@2.0.0/element.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/gh/cloudouble/live@2.0.0/live.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/jsonata@1.8.5/jsonata.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/marked@4.0.0/marked.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/gh/jeremyfa/yaml.js@0.3.0/dist/yaml.legacy.min.js"></script>
+        <script async defer src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.17"></script>
+        <script defer src="https://cdn.jsdelivr.net/gh/cloudouble/palette@3.1.7/-/palette.min.js"></script>
+        <script palette-include="script.js"></script>
+    </body>
+</html>

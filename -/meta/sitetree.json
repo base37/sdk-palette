@@ -1,0 +1,125 @@
+{
+    "contact": {
+        "canonicalPath": "contact",
+        "description": "The contact page for Palette",
+        "icon": "image/icon/192.png",
+        "kind": "silo",
+        "name": "contact",
+        "nav": {
+            "footer": 200
+        },
+        "path": "contact",
+        "template": "palette",
+        "title": "Palette Contact"
+    },
+    "feature": {
+        "canonicalPath": "feature",
+        "changefreq": "daily",
+        "description": "The feature page kind for Palette",
+        "icon": "image/icon/192.png",
+        "kind": "feature",
+        "name": "feature",
+        "nav": {
+            "pagesmenu": 1,
+            "top": 100
+        },
+        "path": "feature",
+        "priority": 0.8,
+        "template": "palette",
+        "title": "Palette Feature Page"
+    },
+    "index": {
+        "canonicalPath": "index",
+        "description": "A Starter Kit For Your Progressive Web App",
+        "icon": "image/icon/192.png",
+        "kind": "home",
+        "name": "home",
+        "nav": {
+            "pagesmenu": 999999999999
+        },
+        "path": "",
+        "template": "palette",
+        "title": "Palette v3.1.7"
+    },
+    "minimal": {
+        "canonicalPath": "minimal",
+        "description": "The minimal page kind for Palette",
+        "icon": "image/icon/192.png",
+        "kind": "minimal",
+        "name": "minimal",
+        "nav": {
+            "top": 200
+        },
+        "path": "minimal",
+        "template": "palette",
+        "title": "Palette Minimal Page"
+    },
+    "privacy": {
+        "canonicalPath": "privacy",
+        "description": "The privacy policy for Palette",
+        "icon": "image/icon/192.png",
+        "kind": "silo",
+        "name": "privacy",
+        "nav": {
+            "footer": 100
+        },
+        "path": "privacy",
+        "template": "palette",
+        "title": "Palette Privacy"
+    },
+    "section": {
+        "index": {
+            "canonicalPath": "section/index",
+            "description": "Section Index Page",
+            "href": "section/",
+            "icon": "image/icon/192.png",
+            "kind": "feature",
+            "name": "section",
+            "nav": {
+                "top": 300
+            },
+            "path": "section",
+            "template": "palette",
+            "title": "Section"
+        },
+        "page1": {
+            "canonicalPath": "section/page1",
+            "description": "Section Page One",
+            "icon": "image/icon/192.png",
+            "kind": "minimal",
+            "name": "page1",
+            "nav": {
+                "section": 100
+            },
+            "path": "section/page1",
+            "template": "palette",
+            "title": "Page 1"
+        },
+        "page2": {
+            "canonicalPath": "section/page2",
+            "description": "Section Page Two",
+            "icon": "image/icon/192.png",
+            "kind": "minimal",
+            "name": "page2",
+            "nav": {
+                "section": 200
+            },
+            "path": "section/page2",
+            "template": "palette",
+            "title": "Page 2"
+        },
+        "page3": {
+            "canonicalPath": "section/page3",
+            "description": "Section Page Three",
+            "icon": "image/icon/192.png",
+            "kind": "minimal",
+            "name": "page3",
+            "nav": {
+                "section": 300
+            },
+            "path": "section/page3",
+            "template": "palette",
+            "title": "Page 3"
+        }
+    }
+}

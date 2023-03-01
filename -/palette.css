@@ -1,0 +1,533 @@
+:root{
+    --font-family: Roboto,sans-serif;
+    --theme-color: #4a110d;
+    --background-color: #ffffff;
+    --font-color: #182126;
+    --cover-font-color: #ffffff;
+    --cover-background-color: #182126;
+    --image-cover: url(image/cover/default.webp);
+    --image-icon: url(image/icon/512.webp);
+    --image-logo: url(image/logo/default.webp) 
+}
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body > * {
+    display: unset;
+}
+body > noscript {
+    display: none;
+}
+a, h1 {
+    color: var(--font-color);
+}
+body > header {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 170px;
+    text-align: right;
+}
+body[kind="minimal"] > header {
+    height: 70px;
+}
+body > header > a {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    height: 70px;
+}
+body[kind="minimal"] > header > a {
+    display: none;
+}
+body > header > a img {
+    height: 100%;
+}
+body > footer > nav, body > header > nav {
+    display: inline-block;
+    height: 70px;
+    text-align: center;
+    margin-right: 25px;
+    text-transform: capitalize;
+}
+body > footer > nav > a, body > header > nav > a {
+    display: inline-block;
+    height: calc(100% - 25px);
+    padding-top: 25px;
+    width: 120px;
+    text-decoration: none;
+    font-weight: 700;
+}
+body > header > nav {
+    text-align: right;
+}
+body > header > nav > a {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--background-color);
+    color: var(--theme-color);
+}
+body > header > nav > a.active {
+    background-color: var(--theme-color);
+    color: var(--background-color);
+    cursor: default;
+}
+body > footer {
+    display: block;
+    height: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+body > footer > nav {
+    margin-right: unset;
+    height: 45px;
+}
+body > footer > nav > a {
+    margin-right: unset;
+    height: calc(100% - 15px);
+    padding-top: 15px;
+    font-size: 80%;
+}
+body[kind="home"] > header, body[kind="feature"] > header {
+    height: 470px;
+}
+body > header > h1 {
+    display: block;
+    padding-top: 20px;
+    height: 60px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    background-color: var(--cover-background-color);
+    background-image: var(--image-cover);
+    color: var(--cover-font-color);
+    background-position: center 0;
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+body[kind="home"] > header > h1, body[kind="feature"] > header > h1 {
+ height: 400px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: normal;
+}
+body > header > h1 > span {
+    display: inline-block;
+}
+body[kind="home"] > header > h1 > span, body[kind="feature"] > header > h1 > span {
+    margin-top: 180px;
+}
+body[kind=section] > header > h1 > span {
+    margin-top: 10px;
+}
+body[kind="feature"] > header > h1 > span {
+    margin-top: 180px;
+}
+body > nav.breadcrumb {
+    margin: 1em;
+    margin-left: 25px;
+    width: calc(100% - 2em - 225px);
+    font-size: 90%;
+    opacity: 0.8;
+    min-height: 2em;
+    text-transform: capitalize;
+}
+body > nav.breadcrumb > a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+body > nav.breadcrumb > a::after {
+    content: ' > ';
+    margin-left: 0.75em;
+    margin-right: 0.25em;
+    display: inline-block;
+}
+body > nav.breadcrumb > a:last-of-type::after {
+    content: '';
+}
+body > nav.breadcrumb > a.active, body > nav.pagesmenu > a.active {
+    cursor: default;
+    text-decoration: none;
+    opacity: 0.8;
+    font-style: italic;
+    font-weight: normal;
+    color: var(--theme-color);
+}
+body[kind="home"] > nav.breadcrumb {
+    display: none;
+}
+body > nav.pagesmenu {
+    position: absolute;
+    right: 25px;
+    top: calc(170px + 1em);
+    text-align: right;
+    width: 200px;
+    font-weight: bold;
+    font-size: 90%;
+    padding-bottom: 2em;
+    background-color: var(--background-color);
+    color: var(--font-color) 
+}
+body[kind="minimal"] > nav.pagesmenu {
+    top: calc(70px + 1em);
+}
+
+body[kind="home"] > nav.pagesmenu {
+    display: none;
+}
+body[kind="feature"] > nav.pagesmenu {
+    top: calc(470px + 1em);
+}
+body > nav.pagesmenu > a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+body > nav.pagesmenu > a:first-child {
+    margin-top: 20px;
+}
+body > main {
+    display: block;
+    margin: 1em;
+    margin-left: 25px;
+    width: calc(100% - 2em - 225px);
+    min-height: 500px;
+}
+body > header > h1 {
+    text-align: left;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding-left: 30px;
+    width: calc(100% - 30px);
+    font-size: 135%;
+}
+body[kind="home"] > header > h1, body[kind="feature"] > header > h1 {
+    text-align: center;
+    font-size: 200%;
+}
+body[kind="minimal"] > header > h1 {
+    top: 0;
+    z-index: -1;
+    height: 30px;
+    text-align: left;
+    padding-left: 25px;
+    width: calc(100% - 25px);
+    white-space: nowrap;
+}
+
+body > header > nav {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color: var(--background-color);
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+    text-transform: capitalize;
+}
+body[kind="minimal"] > header > nav {
+    background-color: transparent;
+}
+body > header > nav > a {
+    display: none;
+    width: 120px;
+    margin-right: 30px;
+    text-align: right;
+    height: 1em;
+}
+body[kind="minimal"] > header > nav > a {
+    background-color: transparent;
+    color: var(--cover-font-color);
+}
+body[kind="minimal"] > header > nav > a.active {
+    background-color: var(--theme-color);
+    color: var(--background-color);
+}
+
+body > header > nav > a:last-of-type {
+    padding-bottom: 2em;
+}
+body > nav.pagesmenu {
+    width: 200px;
+    text-transform: capitalize;
+}
+body[kind=home] > main {
+    width: calc(100% - 2em - 25px);
+}
+body[kind="section"] > main, body[kind="section"] > nav.breadcrumb, body[kind="page"] > main, body[kind="page"] > nav.breadcrumb {
+    width: calc(100% - 3em - 225px);
+}
+
+body[kind="minimal"] > nav.pagesmenu {
+    width: 169px;
+    border-left: 1px solid var(--font-color);
+    height: calc(2em - 1px);
+    padding-bottom: 0;
+    background-color: var(--font-color);
+    color: var(--background-color);
+}
+body[kind="minimal"] > nav.pagesmenu:hover, body[kind="minimal"] > nav.pagesmenu:active {
+    width: 199px;
+    height: auto;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+body[kind="minimal"] > nav.pagesmenu::after {
+    content: "\2BC6";
+    background-color: var(--font-color);
+    color: var(--background-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 1em);
+    padding-top: 0.25em;
+    height: 1.75em;
+    text-align: right;
+    padding-right: 1em;
+}
+body[kind="minimal"] > nav.pagesmenu:hover::after, body[kind="minimal"] > nav.pagesmenu:active::after {
+    content: "\2BC5";
+}
+body[kind="minimal"] > nav.pagesmenu > a {
+    display: none;
+    padding-right: 1em;
+    width: calc(100% - 1em);
+    color: var(--background-color);
+}
+body[kind="minimal"] > nav.pagesmenu:hover > a, body[kind="minimal"] > nav.pagesmenu:active > a {
+    display: block;
+}
+body[kind="minimal"] > nav.pagesmenu:hover > a.active, body[kind="minimal"] > nav.pagesmenu:active > a.active {
+    color:  var(--background-color);
+}
+body[kind="minimal"] > nav.pagesmenu:hover > a:first-of-type, body[kind="minimal"] > nav.pagesmenu:active > a:first-of-type {
+    margin-top: 0.5em;
+}
+
+body[kind="silo"] > nav.pagesmenu, nav.pagesmenu[palette-nav-linkcount="0"], nav.pagesmenu:not([palette-nav-linkcount]) {
+    display: none;
+}
+
+body[kind="minimal"] > main, body[kind="silo"] > main {
+    width: calc(100% - 2em - 20px);
+}
+
+
+@media (max-width:999.999px) {
+    body > header > nav::after {
+        display: block;
+        width: 60px;
+        height: 55px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 10px;
+        text-align: center;
+        font-weight: 700;
+        padding-top: 15px;
+        font-size: 200%;
+        content: '\2630';
+    }
+    body[kind="minimal"] > header > nav::after {
+        color: var(--cover-font-color)
+    }
+    body > header > nav:hover::after, body > header > nav:active::after {
+        display: none;
+    }
+    body > header > nav:hover, body > header > nav:active {
+        width: 200px;
+        height: auto;
+        padding-right: 0;
+        background-color: transparent;
+        color: var(--font-color);
+        padding-top: 70px;
+    }
+    body[kind="minimal"] > header > nav:hover, body[kind="minimal"] > header > nav:active {
+        background-color: transparent;
+    }
+    body > header > nav:hover > a, body > header > nav:active > a {
+        display: inline-block;
+        height: 0;
+        padding-bottom: 2em;
+        background-color: var(--font-color);
+        color: var(--background-color);
+        padding-right: 30px;
+        margin-right: 0;
+        width: calc(100% - 30px);
+    }
+    body > header > nav:hover > a.active, body > header > nav:active > a.active {
+        background-color: var(--theme-color);
+        color: var(--background-color);
+        cursor: default;
+    }
+    body > header > nav:hover > a:first-of-type, body > header > nav:active > a:first-of-type {
+        border-top: 1px solid var(--cover-background-color);
+    }
+    body > nav.pagesmenu {
+        width: 169px;
+        border-left: 1px solid var(--font-color);
+        height: calc(2em - 1px);
+        padding-bottom: 0;
+        background-color: var(--font-color);
+        color: var(--background-color);
+    }
+    body > nav.pagesmenu:hover, body > nav.pagesmenu:active {
+        height: auto;
+        width: 199px;
+        padding-top: 2em;
+        padding-bottom: 1em;
+    }
+    body > nav.pagesmenu::after {
+        content: "\2BC6";
+        background-color: var(--font-color);
+        color: var(--background-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 1em);
+        padding-top: 0.25em;
+        height: 1.75em;
+        text-align: right;
+        padding-right: 1em;
+    }
+    body > nav.pagesmenu:hover::after, body > nav.pagesmenu:active::after {
+        content: "\2BC5";
+    }
+    body > nav.pagesmenu > a {
+        display: none;
+        padding-right: 1em;
+        width: calc(100% - 1em);
+        color: var(--background-color);
+    }
+    body > nav.pagesmenu:hover > a, body > nav.pagesmenu:active > a {
+        display: block;
+    }
+    body > nav.pagesmenu:hover > a.active, body > nav.pagesmenu:active > a.active {
+        color:  var(--background-color);
+    }
+    body > nav.pagesmenu:hover > a:first-of-type, body > nav.pagesmenu:active > a:first-of-type {
+        margin-top: 0.5em;
+    }
+    body > main {
+        width: calc(100% - 2em - 20px);
+    }
+}
+@media (max-width:400px) {
+    body > nav.pagesmenu, body[kind="minimal"] > nav.pagesmenu {
+        width: 40px;
+    }
+    body > nav.pagesmenu:hover, body[kind="minimal"] > nav.pagesmenu:hover, body > nav.pagesmenu:active, body[kind="minimal"] > nav.pagesmenu:active {
+        width: 199px;
+    }
+    body[kind="minimal"] > header > h1 > span {
+        width:  200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (min-width:1000px) {
+    body > header > h1 {
+        text-align: center;
+        top: 70px;
+        padding-left: 0;
+        width: 100%;
+        font-size: 200%;
+    }
+    body > header > nav {
+        position: static;
+        top: unset;
+        right: unset;
+        width: calc(100% - 250px);
+        height: 70px;
+        border-bottom-width: 0;
+        border-bottom-color: none;
+    }
+    body > header > nav > a {
+        display: inline-block;
+        padding-bottom: 0;
+        text-align: center;
+        margin-right: 0;
+        height: calc(100% - 25px);
+    }
+    body > header > nav > a:last-of-type {
+        padding-bottom: unset;
+    }
+}
+@media (prefers-color-scheme:dark) {
+    :root{
+        --font-family: Roboto,sans-serif;
+        --theme-color: #4a110d;
+        --background-color: #182126;
+        --font-color: #ffffff;
+        --cover-font-color: #ffffff;
+        --cover-background-color: #182126;
+        --image-cover: url(image/cover/default.webp);
+        --image-icon: url(image/icon/dark/512.webp);
+        --image-logo: url(image/logo/dark/default.webp);
+    }
+    body{
+        background-color: var(--background-color);
+        color: var(--font-color);
+        font-family: var(--font-family) 
+    }
+    a, h1{
+        color:var(--font-color);
+    }
+    body > header > nav {
+        background-color: var(--font-color);
+    }
+    body > header > nav::after {
+        background-color: var(--background-color);
+    }
+    body > header > nav > a {
+        background-color: var(--font-color);
+        color: var(--theme-color);
+    }
+    body > header > nav > a.active {
+        background-color: var(--theme-color);
+        color: var(--font-color);
+    }
+    body > nav.breadcrumb > a.active {
+        color: var(--font-color);
+    }
+    body > nav.pagesmenu {
+        background-color: var(--background-color);
+        color: var(--font-color) 
+    }
+    body > header > h1 {
+        background-color: var(--cover-background-color);
+        background-image: var(--image-cover);
+        color: var(--cover-font-color);
+    }
+    @media (max-width: 999.999px) {
+        body > nav.pagesmenu {
+            border-left: 1px solid var(--font-color);
+            background-color: var(--font-color);
+            color: var(--background-color);
+        }
+        body > nav.pagesmenu a {
+            color: var(--background-color);
+        }
+        body > nav.pagesmenu::after {
+            background-color: var(--font-color);
+            color: var(--background-color);
+        }
+    }
+}
+ 

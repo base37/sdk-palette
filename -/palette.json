@@ -1,0 +1,27 @@
+{
+  "yamlSupport": true, 
+  "singlePage": false, 
+  "defaultPath": "index", 
+  "host": {
+    "localhost:4433": {
+      "defaultSuffix": "html"
+    } 
+  }, 
+  "location": {
+    "host": "palette-el4.pages.dev", 
+    "hostname": "palette-el4.pages.dev", 
+    "origin": "https://palette-el4.pages.dev", 
+    "port": "", 
+    "protocol": "https:"
+  },  
+  "meta": ["sitetree"], 
+  "sitemapDefaults": {
+    "changefreq": "monthly", 
+    "priority": 0.5
+  }, 
+  "refreshPeriod": 100, 
+  "siteName": "LiveElement Palette", 
+  "siteURL": "https://palette-el4.pages.dev", 
+  "sitemapRoot": "https://palette-el4.pages.dev", 
+  "cover": "-/image/cover/default.webp"
+}
